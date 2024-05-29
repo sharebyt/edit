@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Editor</title>
+<link rel="stylesheet" href="https://actwu.github.io/neu/n.css"/>
+<script src="https://actwu.github.io/neu/n.js"></script>
+</head>
+<body>
+<bg bbg></bg>
+
+<layout>
+  <cont row>
+  <a lbg onmousedown="
+  displayFile('#data')">
+  <p agr bold l2>Open</p>
+  </a>
+  <a gbg onmousedown="
+ save()">
+  <p agr bold g2>Save</p>
+  </a></cont>
+  <input m agr bold
+  placeholder="Name" small-p bbg id="name" 
+  ></input>
+  <textarea agr bold neu small-m layer="1" m
+  placeholder="Data" small-p bbg id="data" 
+  flex></textarea>
+  
+  </layout>
+  <cont mbg>
+    <p agr bold b>Generated Using Futr Build.</p>
+    </cont>
+  <script>
+    function save() {
+      let dn = document.querySelector('#name');
+  let dd = document.querySelector('#data');
+  fn = dn.value || ran(9e4);
+  newFile({filename:fn,
+  filetype:'text', data:dd.value});
+    }
+  </script>
+</body>
+</html>
