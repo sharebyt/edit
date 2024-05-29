@@ -12,26 +12,27 @@
 <bg bbg></bg>
 
 <layout>
-  <cont row>
-  <a lbg onmousedown="
-  displayFile('#data')">
-  <p agr bold l2>Open</p>
-  </a>
-  <a gbg onmousedown="
- save()">
-  <p agr bold g2>Save</p>
-  </a></cont>
-  <input m agr bold
-  placeholder="Name" small-p bbg id="name" 
-  ></input>
+  
   <textarea agr bold neu small-m layer="1" m
   placeholder="Data" small-p bbg id="data" 
   flex></textarea>
-  
+  <input m agr bold
+  placeholder="Name" small-p bbg id="name" 
+  ></input>
+  <cont row>
+    <a lbg onmousedown="
+    displayFile('#data')">
+    <p agr bold l2>Open</p>
+    </a>
+    <a gbg onmousedown="
+   save()">
+    <p agr bold g2>Save</p>
+    </a></cont>
   </layout>
   <cont mbg>
-    <p agr bold b>Generated Using Futr Build.</p>
+    <p pop b>Generated Using Futr Build.</p>
     </cont>
+    
   <script>
     function save() {
       let dn = document.querySelector('#name');
